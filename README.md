@@ -15,12 +15,12 @@ Thus, as indicated in the attached article, it was worth starting with a suffici
 It would be nice to train a non-neural model on our data and look at what results we can get. I chose the **support vector machine** as such a model, because it is one of the most popular machine learning methods after gradient boosting. There should be couple words about training the **SVM**:
 ### Feature-extracting
 After searching the internet I've found the [information](https://daehnhardt.com/blog/2023/03/05/python-audio-signal-processing-with-librosa/), that one could use **Mel-Frequency Cepstral Coefficients** for mood-recognition, so I extracted this vectors with **Librosa lib** and then used it as vector of features for learning.
-### Results
-I've got 32.5% accuracy on this baseline model (random classifier gives 12.5%).
 ### Hyperparameters
 As hyperparameters of **SVM** I had: 1) kernel type, 2) regulirization coef. and 3) learning rate. To select hyperparameters I used the easiest method - grid-search. For more information, see the attached notebook.
+### Results
+I've got 32.5% accuracy on this baseline model (random classifier gives 12.5%).
 # What I would like to do
-1) Implement model training as specified in the atteched article: AdamW learning rate is warmed up for the first 10% of updates, held constant for the next 40% and then linearly decayed for the remainder.
+**1) Implement model training as specified in the atteched article: AdamW learning rate is warmed up for the first 10% of updates, held constant for the next 40% and then linearly decayed for the remainder.**
 2) Try another pooling strategies.
 3) Use bayessian approach to the selection of hyperparameters (AdamW).
 4) Do kFold approch on my six folds.
