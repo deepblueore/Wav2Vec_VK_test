@@ -6,7 +6,7 @@ We are dealing with Wav2Vec2.0. It is a self-supervised learning model, whic mea
 ## About dataset
 We use RAVDESS dataset to deal with the task. It's convenient enough because this data is gender and emotional balanced. Moreover, there are the same number of recordings of each actor and approximately even distribution of emotions. So So we don't need any additional motivation with the data, except to convert it into a 16kHz. From this uniformity follows **my way of dividing the data**: I divided the dataset into six folds of four actors each, and then sent one of the folds to validation, and the rest to the train. This decision was made **to avoid dataleaks** due to the fact that two recordings of the same emotion from the same actor could fall into both train and validation.
 ## About Wav2Vec fine-tuning
-The Trainer class was used for fine-tuning, since it is the simplest one for these purposes. All parameters of AdamW were set to [default, learning_rate=3e-4](https://arxiv.org/pdf/1412.6980.pdf)
+The Trainer class was used for fine-tuning, since it is the simplest one for these purposes. When choosing, I relied on this [note](https://habr.com/ru/articles/704592/). All parameters of AdamW were set to [default, learning_rate=3e-4](https://arxiv.org/pdf/1412.6980.pdf)
 ## About baseline-model
 It would be nice to train a non-neural model on our data and look at what results we can get. I chose the **support vector machine** as such a model, because it is one of the most popular machine learning methods after gradient boosting. There should be couple words about training the **SVM**:
 ### Feature-extracting
