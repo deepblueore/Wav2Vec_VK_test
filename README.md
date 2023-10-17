@@ -15,7 +15,7 @@ It would be nice to train a non-neural model on our data and look at what result
 ### Feature-extracting
 After searching the internet I've found the [information](https://daehnhardt.com/blog/2023/03/05/python-audio-signal-processing-with-librosa/), that one could use **Mel-Frequency Cepstral Coefficients** for mood-recognition, so I extracted this vectors with **Librosa lib** and then used it as vector of features for learning.
 ### Results
-I've got 32.5% accuracy on this baseline model.
+I've got 32.5% accuracy on this baseline model (random classifier gives 12.5%).
 ### Hyperparameters
 As hyperparameters of **SVM** I had: 1) kernel type, 2) regulirization coef. and 3) learning rate. To select hyperparameters I used the easiest method - grid-search. For more information, see the attached notebook.
 # What I would like to do
