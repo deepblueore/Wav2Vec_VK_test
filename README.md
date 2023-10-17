@@ -20,7 +20,7 @@ As hyperparameters of **SVM** I had: 1) kernel type, 2) regulirization coef. and
 ### Results
 I've got 32.5% accuracy on this baseline model (random classifier gives 12.5%).
 # What I would like to do
-1) Implement model training as specified in the atteched article: AdamW learning rate is warmed up for the first 10% of updates, held constant for the next 40% and then linearly decayed for the remainder.
+1) **The most essential**. Implement model training as specified in the atteched article: AdamW learning rate is warmed up for the first 10% of updates, held constant for the next 40% and then linearly decayed for the remainder.
 2) Try another pooling strategies.
 3) Use bayessian approach to the selection of hyperparameters (AdamW).
 4) Do kFold approch on my six folds.
