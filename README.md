@@ -1,1 +1,3 @@
 # Wav2Vec
+## A few words about our goals and model.
+We are dealing with Wav2Vec2.0. It is a self-supervised learning model, whic means it's pre-trained on unlabeled data and we are going to fine-tune it on our data which is small enough. The model we are working with consists of local encoder, contextualized encoder and quantization module. A randomly initialized linear projection is added at the output of the contextual encoder and the CTC-loss is minimized - that is fine-tuning. Thus, the main advantage of the model is that we can get good results on fairly small data. For more information, see the attached articles.
