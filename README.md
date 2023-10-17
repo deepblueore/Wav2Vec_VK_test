@@ -12,4 +12,7 @@ After searching the internet I've found the [information](https://daehnhardt.com
 ### Hyperparameters
 As hyperparameters of **SVM** I had: 1) kernel type, 2) regulirization coef. and 3) learning rate. To select hyperparameters I used the easiest method - grid-search. For more information, see the attached notebook.
 # What I would like to do
-1) Implement model training as specified in the atteched article: 
+1) Implement model training as specified in the atteched article: AdamW learning rate is warmed up for the first 10% of updates, held constant for the next 40% and then linearly decayed for the remainder.
+2) Try another pooling strategies.
+3) Use bayessian approach to the selection of hyperparameters (AdamW).
+4) Do kFold approch on my six folds.
