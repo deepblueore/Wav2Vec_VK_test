@@ -23,6 +23,8 @@ After searching the internet I've found the [information](https://daehnhardt.com
 As hyperparameters of **SVM** I had: 1) kernel type, 2) regulirization coef. and 3) learning rate. To select hyperparameters I used the easiest method - grid-search. For more information, see the attached notebook.
 ### Results
 I've got 32.5% accuracy on this baseline model (random classifier gives 12.5%).
+## Conclusion
+Wav2Vec2.0 model was trained on a much smaller number of iterations than the SVM, but still received loss whic is twice better. To get better accuracy, we can simply increase the number of iterations - but this way we will get stuck in the neighborhood of the optimum. By increasing the size of the training batch or starting to reduce the step after the 70% of all iterations, we will get significantly better values of the accuracy of the Wav2Vec model.
 # What I would like to do
 1) **The most essential**. Implement training using PyTorch (because using Trainer I can't make step decreasing after 70% of all the iterations). 
 3) Use bayessian approach to the selection of hyperparameters (AdamW).
